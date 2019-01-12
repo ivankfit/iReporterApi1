@@ -12,3 +12,4 @@ iReporter enables citizens to report corruption in communities
 9. A user can change their geolocation
 10. Admin can chage the status of a record
 
+
