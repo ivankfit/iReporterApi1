@@ -1,0 +1,4 @@
+venv/
+ tests/__pycache__/test_base.cpython-37-PYTEST.pyc
+        modified:   tests/__pycache__/test_users.cpython-37-PYTEST.pyc
+.vscode
