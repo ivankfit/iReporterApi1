@@ -18,7 +18,8 @@ def index():
 
 @incident.route('/api/v1/red-flags',methods=['POST'])
 def postred_flags():
-    if not request.headers['Content-Type']=='multipart/form-data':
+    ctype=str(request.headers['Content-Type']).split(';')[0]
+    if ctype!='multipart/form-data':
           return jsonify({'msg':'request header type should be form-data'}),400
     data = request.form
     PROJECT_HOME = os.path.dirname(os.path.realpath(__file__))
@@ -46,7 +47,7 @@ def postred_flags():
 
 @incident.route('/api/v1/red-flags',methods=['GET'])
 def getred_flags():
-        return jsonify({'data':incidents}),200
+        return jsonify({'status': 200, 'data':incidents})
 
   #getting a specific red flag
 @incident.route('/api/v1/red-flags/<int:id>',methods=['GET'])
